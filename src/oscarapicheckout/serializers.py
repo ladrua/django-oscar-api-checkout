@@ -229,8 +229,8 @@ class CheckoutSerializer(OscarCheckoutSerializer):
         )
 
         # Limit baskets to only the one that is active and owned by the user.
-        basket = get_basket(request)
-        self.fields['basket'].queryset = Basket.objects.filter(pk=basket.pk)
+        # basket = get_basket(request)
+        # self.fields['basket'].queryset = Basket.objects.filter(pk=basket.pk)
 
 
     def get_ownership_calc(self):
